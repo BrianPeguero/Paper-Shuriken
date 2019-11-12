@@ -28,11 +28,14 @@ function throwingShuriken(shuriken){
     }
 }
 
-for (let i = 0; i <= shurikens.length; i++){
-    setTimeout(() => {
-        throwingShuriken(shurikens[i])
-    }, 500 * i)
-}
+setTimeout(() => {
+    for (let i = 0; i <= shurikens.length; i++){
+        setTimeout(() => {
+            throwingShuriken(shurikens[i])
+        }, 500 * i)
+    }
+}, 1000)
+
 
 function openingEyes (leftEyeLid, rightEyeLid){
     setTimeout(() => {
@@ -45,7 +48,7 @@ function openingEyes (leftEyeLid, rightEyeLid){
             }, i)
             
         }
-    }, 2000)
+    }, 3000)
     
 }
 openingEyes(leftEyeLid, rightEyeLid)
