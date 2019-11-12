@@ -1,0 +1,461 @@
+html {
+    margin: 0;
+    padding: 0;
+
+    background-color: whitesmoke;
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+
+    overflow-x: hidden;
+}
+
+nav {
+    width:100%;
+    margin:0;
+
+    color:white;
+
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+
+    position: fixed;
+
+    z-index: 4;
+}
+
+.nav-bar-logo {
+    height: auto;
+    width: auto;
+
+    padding: 3% 5%;
+}
+
+.nav-bar-links {
+    height: auto;
+    width: auto;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    
+}
+
+.nav-bar-links a {
+    width: 25%;
+    height: auto;
+
+    text-decoration: none;
+
+    color: white;
+}
+
+.jumbo-header{
+    height: 100vh;
+    width: 100vw;
+
+    background-color: #000;
+
+    position: relative;
+}
+
+.shuriken {
+    width: 200px;
+    height:200px;
+
+    margin: 0;
+    padding: 0;
+
+    position: relative;
+}
+
+/* outter shuriken*/
+.shuriken-top-outer {
+    width: 0;
+    height: 0;
+    
+	border-left: 50px solid transparent;
+	border-right: 50px solid transparent;
+    border-bottom: 100px solid silver;
+    
+    position: absolute;
+
+    z-index: 1;
+    
+    top: 0px;
+    left:50px
+}
+
+.shuriken-bottom-outer {
+    width: 0;
+    height: 0;
+    
+	border-left: 50px solid transparent;
+	border-right: 50px solid transparent;
+    border-top: 100px solid silver;
+    
+    position: absolute;
+
+    z-index: 1;
+
+    top: 100px;
+    left:50px;
+}
+
+.shuriken-left-outer {
+    width: 0;
+	height: 0;
+	border-bottom: 50px solid transparent;
+	border-top: 50px solid transparent;
+    border-right: 100px solid silver;
+    
+    position: absolute;
+
+    z-index: 1;
+
+    top:50px;
+    left:0px;
+
+}
+
+.shuriken-right-outer {
+    width: 0;
+	height: 0;
+	border-bottom: 50px solid transparent;
+	border-top: 50px solid transparent;
+    border-left: 100px solid silver;
+    
+    position: absolute;
+
+    z-index: 1;
+
+    top:50px;
+    left:100px;
+}
+
+/* the center whole for the shuriken*/
+.center-hole{
+    height:25px;
+    width:25px;
+
+    border-radius: 50%;
+
+    background-color: white;
+
+    position: absolute;
+
+    z-index: 3;
+
+    top:90px;
+    left:87px;
+
+}
+
+/* inner shuriken*/
+.shuriken-top-inner {
+    width: 0;
+	height: 0;
+	border-left: 35px solid transparent;
+	border-right: 35px solid transparent;
+    border-bottom: 75px solid rgb(37, 37, 37);
+    
+    position: absolute;
+
+    z-index: 2;
+    
+    top: 20px;
+    left: 65px
+}
+
+.shuriken-bottom-inner {
+    width: 0;
+	height: 0;
+	border-left: 35px solid transparent;
+	border-right: 35px solid transparent;
+    border-top: 75px solid rgb(37, 37, 37);
+    
+    position: absolute;
+
+    z-index: 2;
+
+    top: 110px;
+    left: 65px;
+}
+
+.shuriken-left-inner {
+    width: 0;
+	height: 0;
+	border-bottom: 35px solid transparent;
+	border-top: 35px solid transparent;
+    border-right: 75px solid rgb(37, 37, 37);
+    
+    position: absolute;
+
+    z-index: 2;
+
+    top: 65px;
+    left:15px;
+
+}
+
+.shuriken-right-inner {
+    width: 0;
+	height: 0;
+	border-bottom: 35px solid transparent;
+	border-top: 35px solid transparent;
+    border-left: 75px solid rgb(37, 37, 37);
+    
+    position: absolute;
+
+    z-index: 2;
+
+    top: 65px;
+    left: 110px;
+}
+
+#shuriken-1 {
+    position: absolute;
+
+    top: 100px;
+    left: -1000px
+}
+
+#shuriken-2 {
+    position: absolute;
+    z-index: 3;
+
+    top: 200px;
+    left: -1000px
+}
+
+#shuriken-3 {
+    position: absolute;
+
+    top: 300px;
+    left: -1000px
+}
+
+@keyframes thrownShuriken {
+    0% {
+        left:-100%;
+        transform: rotate(0deg);
+    }
+    100% {
+        left:90%;
+        transform: rotate(720deg);
+    }
+}
+
+.eyes{
+    margin: 0 auto;
+
+    position: absolute;
+    top: 600px;
+    
+    left: 600px;
+
+
+    display:flex;
+}
+
+.eye {
+    margin-left: 3%;
+    margin-right: 3%;
+}
+
+.left-eye {
+    width: 200px;
+    height: 100px;
+
+    border-radius: 50% / 100%;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+
+    background-color: white;
+
+    transform: rotate(30deg);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right-eye {
+    width: 200px;
+    height: 100px;
+
+    border-radius: 50% / 100%;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+
+    background-color: white;
+
+    transform: rotate(-30deg);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pupil {
+    height: 50px;
+    width: 50px;
+    
+    background-color: #000;
+
+    border-radius: 50%;
+}
+
+.jumbo-title {
+    height:auto;
+    width: 300px;
+
+    color: white;
+    
+    font-size: 5em;
+    font-style: italic;
+
+    position: absolute;
+
+    z-index: 0;
+
+    top:150px;
+    left: 45px;
+}
+
+.section-container {
+    width: 80%;
+    height: auto;
+
+    margin: 0 auto;
+
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+
+.section-title {
+    font-size: 3em;
+
+    margin-top: 7%;
+    margin-bottom: 7%;
+}
+
+.section-description {
+    font-size: 1.75em;
+}
+
+.product-grid {
+    display: grid;
+
+    grid-template: 300px / repeat(3, 300px);
+
+    grid-gap: 10%;
+}
+
+.card {
+    height: fit-content;
+
+    padding-bottom: 10%;
+
+    box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.4);
+}
+
+.card-img {
+    padding-top: 10%;
+    padding-bottom: 10%;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.products {
+    margin-bottom: 20%;
+}
+
+/*green shuriken*/
+#shuriken-green .shuriken-top-inner {
+    border-bottom: 75px solid green;
+}
+
+#shuriken-green .shuriken-bottom-inner {
+    border-top: 75px solid green;
+}
+
+#shuriken-green .shuriken-left-inner {
+    border-right: 75px solid green;
+}
+
+#shuriken-green .shuriken-right-inner {
+    border-left: 75px solid green;
+}
+
+
+/*red shuriken*/
+#shuriken-red .shuriken-top-inner {
+    border-bottom: 75px solid red;
+}
+
+#shuriken-red .shuriken-bottom-inner {
+    border-top: 75px solid red;
+}
+
+#shuriken-red .shuriken-left-inner {
+    border-right: 75px solid red;
+}
+
+#shuriken-red .shuriken-right-inner {
+    border-left: 75px solid red;
+}
+
+
+/*blue shuriken*/
+#shuriken-blue .shuriken-top-inner {
+    border-bottom: 75px solid blue;
+}
+
+#shuriken-blue .shuriken-bottom-inner {
+    border-top: 75px solid blue;
+}
+
+#shuriken-blue .shuriken-left-inner {
+    border-right: 75px solid blue;
+}
+
+#shuriken-blue .shuriken-right-inner {
+    border-left: 75px solid blue;
+}
+
+
+.card-description {
+    font-size: 1.25em;
+
+    width:80%;
+
+    margin-top: 15%;
+
+    margin: 0 auto;
+}
+
+footer {
+    width: 100%;
+    height: auto;
+
+    margin: 0 auto;
+
+    padding-top: .5%;
+    padding-bottom: .5%;
+
+    color: white;
+
+    background-color: rgba(0, 0, 0, 0.6);
+
+    text-align: center;
+}
