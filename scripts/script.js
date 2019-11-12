@@ -12,6 +12,9 @@ var cards = [card1, card2, card3]
 
 var navBar = document.getElementById('nav-bar')
 
+var leftEyeLid = document.getElementById("left-eye-lid")
+var rightEyeLid = document.getElementById("right-eye-lid")
+
 function throwingShuriken(shuriken){
     for(let i = 0; i <= window.innerWidth; i++){
         if(i != window.innerWidth-175){
@@ -31,6 +34,22 @@ for (let i = 0; i <= shurikens.length; i++){
     }, 500 * i)
 }
 
+function openingEyes (leftEyeLid, rightEyeLid){
+    setTimeout(() => {
+        for(let i=0; i <= 195; i++) {
+            setTimeout(() => {
+                leftEyeLid.style.height = `${200-i}px`
+            }, i)
+            setTimeout(() => {
+                rightEyeLid.style.height = `${200-i}px`
+            }, i)
+            
+        }
+    }, 2000)
+    
+}
+openingEyes(leftEyeLid, rightEyeLid)
+
 window.onscroll = () => {
     if(this.scrollY <= 800) {
         navBar.style.backgroundColor = '#000'
@@ -48,3 +67,4 @@ for(let i = 0; i <= cards.length; i++) {
         cards[i].style.transform = 'scale(1, 1)'
     })
 }
+
